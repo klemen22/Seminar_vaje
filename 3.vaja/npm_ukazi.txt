@@ -1,9 +1,0 @@
-npm init 							// ustvari konfiguracijsko datoteko package.json
-npm install express 				// namesti express
-npx express-generator --view=ejs --force	// namesti ogrodje aplikacije (s predlogami ejs)
-npm install							// posodobitve
-npm audit fix --force				// odpravljanje varnostnih ranljivosti
-npm install mysql2					// namesti modul za mysql
-npm install --save-dev nodemon		// modul za samodejni ponovni zagon strežnika ob spremembah
-npm install cors					// modul za upravljanje deljenja virov med domenami(CORS)
-npm install bcrypt					// modul za zgoščevanje gesel (hash)
