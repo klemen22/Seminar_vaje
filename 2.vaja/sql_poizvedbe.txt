@@ -1,0 +1,10 @@
+INSERT INTO igralec (vzdevek, geslo, ime, priimek, email) VALUES (?, ?, ?, ?, ?)
+INSERT INTO odigrana_igra (vzdevek, tezavnost, rezultat) VALUES (?, ?, ?)
+
+SELECT vzdevek, ime, priimek, email FROM igralec
+SELECT vzdevek, ime, priimek, email FROM igralec WHERE vzdevek=?
+SELECT tezavnost, rezultat, casovni_zig FROM odigrana_igra WHERE vzdevek=?
+SELECT vzdevek, MAX(rezultat) FROM odigrana_igra WHERE tezavnost=? GROUP BY vzdevek ORDER BY MAX(rezultat) DESC LIMIT 5
+
+UPDATE igralec SET geslo=?, ime=?, priimek=?, email=? WHERE vzdevek=?
+DELETE FROM igralec WHERE vzdevek=?

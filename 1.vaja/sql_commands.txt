@@ -1,0 +1,15 @@
+INSERT INTO igralec (vzdevek, geslo, ime, priimek, email) VALUES ('Janez', 'password', 'Janez', 'Janez', 'janez.janez@gmail.com')
+
+INSERT INTO odigrana_igra (vzdevek, tezavnost, rezultat) VALUES ('Janez', 2, 22);
+
+SELECT vzdevek, ime, priimek, email FROM igralec WHERE vzdevek = 'maja'
+
+SELECT vzdevek, ime, priimek, email FROM igralec WHERE vzdevek = 'maja'
+
+SELECT tezavnost, rezultat, casovni_zig FROM odigrana_igra WHERE vzdevek = 'maja'
+
+SELECT vzdevek, tezavnost, MAX(rezultat), casovni_zig FROM odigrana_igra WHERE tezavnost = 2 GROUP BY vzdevek ORDER BY MAX(rezultat) DESC LIMIT 3
+
+UPDATE igralec SET ime = 'mmaja', priimek = 'nani', geslo = 'password', email = 'maja.nani@gmail.com' WHERE vzdevek = 'maja' 
+
+DELETE from igralec WHERE vzdevek = 'maja'
